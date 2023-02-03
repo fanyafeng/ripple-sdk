@@ -1,11 +1,8 @@
-package com.ripple.sdk
+package com.ripple.sdk.main.viewholder
 
 import android.content.Intent
-import android.view.ViewGroup
-import androidx.viewbinding.ViewBinding
-import com.ripple.sdk.binding.newBinding
 import com.ripple.sdk.databinding.ItemMainButtonLayoutBinding
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
+import com.ripple.sdk.main.*
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntAnnotation
 
 
@@ -37,7 +34,7 @@ class MainButtonViewHolder(private val binding: ItemMainButtonLayoutBinding) :
     }
 
     @ViewHolderIntAnnotation(AbsMainViewHolderFactory.MAIN_BUTTON)
-    class MainButtonViewHolderFactory :
-        AbsMainViewHolderFactoryAuto<MainButtonViewHolder, ItemMainButtonLayoutBinding>()
+    class Factory :
+        AbsMainViewHolderAutoFactory<MainButtonViewHolder, ItemMainButtonLayoutBinding>()
 }
 

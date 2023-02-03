@@ -1,4 +1,4 @@
-package com.ripple.sdk
+package com.ripple.sdk.main
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

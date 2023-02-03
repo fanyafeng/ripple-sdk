@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap
  *///Github See: https://github.com/fanyafeng
 
 
-abstract class AbsStrategyBaseIntAutoFactory<V : ViewModel, D, VH : StrategyBaseBindingViewHolder<V, D>, VB : ViewBinding>(
+abstract class AbsStrategyBaseIntAutoFactory<VH : StrategyBaseBindingViewHolder<V, D>, VB : ViewBinding, V : ViewModel, D>(
     private val pool: ConcurrentHashMap<Int, StrategyBaseIntFactory<V, D>>
 ) :
     AbsStrategyBaseIntFactory<V, D>(pool) {
@@ -27,23 +27,30 @@ abstract class AbsStrategyBaseIntAutoFactory<V : ViewModel, D, VH : StrategyBase
     ): StrategyBaseViewHolder<V, D> {
         val genericSuperclass = this@AbsStrategyBaseIntAutoFactory.javaClass.genericSuperclass
         if (genericSuperclass is ParameterizedType) {
-            val viewHolderSonClazz = genericSuperclass.actualTypeArguments[0]
-            val viewBindSonClazz = genericSuperclass.actualTypeArguments[1]
+            if (genericSuperclass.actualTypeArguments.isNotEmpty()) {
+                val viewHolderSonClazz = genericSuperclass.actualTypeArguments[0]
+                val viewBindSonClazz = genericSuperclass.actualTypeArguments[1]
 
+                if (viewHolderSonClazz is Class<*> && viewBindSonClazz is Class<*>) {
+                    val constructorMethod =
+                        viewHolderSonClazz.getDeclaredConstructor(viewBindSonClazz)
 
-            if (viewHolderSonClazz is Class<*> && viewBindSonClazz is Class<*>) {
-                val constructorMethod = viewHolderSonClazz.getDeclaredConstructor(viewBindSonClazz)
+                    val method = viewBindSonClazz.getMethod(
+                        "inflate",
+                        LayoutInflater::class.java,
+                        ViewGroup::class.java,
+                        Boolean::class.java
+                    )
 
-                val method = viewBindSonClazz.getMethod(
-                    "inflate",
-                    LayoutInflater::class.java,
-                    ViewGroup::class.java,
-                    Boolean::class.java
-                )
-
-                val resultBinding =
-                    method.invoke(null, LayoutInflater.from(parent.context), parent, false) as VB
-                return constructorMethod.newInstance(resultBinding) as StrategyBaseViewHolder<V, D>
+                    val resultBinding =
+                        method.invoke(
+                            null,
+                            LayoutInflater.from(parent.context),
+                            parent,
+                            false
+                        ) as VB
+                    return constructorMethod.newInstance(resultBinding) as StrategyBaseViewHolder<V, D>
+                }
             }
         }
         throw java.lang.Exception("please check class type is true or not")

@@ -3,9 +3,11 @@ package com.ripple.sdk
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.viewbinding.ViewBinding
 import com.ripple.sdk.binding.inflate
 import com.ripple.sdk.databinding.ActivityMainBinding
+import com.ripple.sdk.main.*
+import com.ripple.sdk.main.viewholder.MainButtonViewHolder
+import com.ripple.sdk.main.viewholder.MainTitleViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseIntFactory
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyWithPriorityIntLinkedMap
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,13 +49,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun initData() {
         StrategyWithPriorityIntLinkedMap<MainViewModel, IMainModel>().apply {
-            register(MainButtonViewHolder.MainButtonViewHolderFactory::class.java)
+            register(MainButtonViewHolder.Factory::class.java)
+            register(MainTitleViewHolder.Factory::class.java)
         }
 
         binding.test.text = viewModel.str
 
         val list =
             mutableListOf(
+                MainModel(
+                    type = AbsMainViewHolderFactory.TITLE,
+                    title = "RecyclerView相关"
+                ),
                 MainModel(
                     type = AbsMainViewHolderFactory.MAIN_BUTTON,
                     title = "测试多类型viewHolder",

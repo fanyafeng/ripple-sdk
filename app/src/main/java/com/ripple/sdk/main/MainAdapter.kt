@@ -1,10 +1,9 @@
-package com.ripple.sdk
+package com.ripple.sdk.main
 
 import android.content.Context
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ripple.sdk.databinding.ItemGeneralEmptyViewLayoutBinding
+import com.ripple.sdk.MainActivity
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyGeneralEmptyViewHolder
 import dagger.hilt.android.qualifiers.ActivityContext

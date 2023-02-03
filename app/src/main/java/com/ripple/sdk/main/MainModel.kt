@@ -1,5 +1,6 @@
-package com.ripple.sdk
+package com.ripple.sdk.main
 
+import com.ripple.sdk.main.IMainModel
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyWithPriorityIntLinkedMap
 import javax.inject.Inject
 
