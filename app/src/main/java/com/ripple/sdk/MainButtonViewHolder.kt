@@ -1,10 +1,9 @@
 package com.ripple.sdk
 
 import android.content.Intent
-import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.viewbinding.ViewBinding
 import com.ripple.sdk.binding.newBinding
-import com.ripple.sdk.binding.newBindingViewHolder
 import com.ripple.sdk.databinding.ItemMainButtonLayoutBinding
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntAnnotation
@@ -38,18 +37,7 @@ class MainButtonViewHolder(private val binding: ItemMainButtonLayoutBinding) :
     }
 
     @ViewHolderIntAnnotation(AbsMainViewHolderFactory.MAIN_BUTTON)
-    class MainButtonViewHolderFactory : AbsMainViewHolderFactory() {
-        override fun onCreateViewHolder(
-            parent: ViewGroup,
-            viewType: Int
-        ) = MainButtonViewHolder(newBinding(parent))
-
-//            MainButtonViewHolder(
-//            ItemMainButtonLayoutBinding.inflate(
-//                LayoutInflater.from(parent.context),
-//                parent,
-//                false
-//            )
-//        )
-    }
+    class MainButtonViewHolderFactory :
+        AbsMainViewHolderFactoryAuto<MainButtonViewHolder, ItemMainButtonLayoutBinding>()
 }
+
