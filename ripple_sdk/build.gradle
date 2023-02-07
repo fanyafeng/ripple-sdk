@@ -41,21 +41,21 @@ android {
     }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.fanyafeng'
-                artifactId = 'ripple-sdk'
-                version = '0.0.5'
-            }
-        }
-        repositories {
-            mavenLocal()
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = 'com.github.fanyafeng'
+//                artifactId = 'ripple-sdk'
+//                version = '0.0.5'
+//            }
+//        }
+//        repositories {
+//            mavenLocal()
+//        }
+//    }
+//}
 
 configurations.all {
     resolutionStrategy {
