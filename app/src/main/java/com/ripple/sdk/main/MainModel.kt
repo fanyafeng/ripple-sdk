@@ -12,7 +12,7 @@ import javax.inject.Inject
  * Description:
  *///Github See: https://github.com/fanyafeng
 
-
+//@JvmRecord
 data class MainModel constructor(
     var type: Int = StrategyWithPriorityIntLinkedMap.DEFAULT_VALUE,
     var title: String? = null,

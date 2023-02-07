@@ -12,7 +12,6 @@ import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIn
  * Description:
  *///Github See: https://github.com/fanyafeng
 
-
 class MainTitleViewHolder(private val binding: ItemMainTitleLayoutBinding) :
     AbsMainBaseBindingViewHolder(binding) {
     override fun bindData(viewModel: MainViewModel?, dataSource: IMainModel?, position: Int) {
