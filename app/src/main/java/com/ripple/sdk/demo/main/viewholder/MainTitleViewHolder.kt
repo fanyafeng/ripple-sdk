@@ -1,7 +1,7 @@
-package com.ripple.sdk.main.viewholder
+package com.ripple.sdk.demo.main.viewholder
 
-import com.ripple.sdk.databinding.ItemMainTitleLayoutBinding
-import com.ripple.sdk.main.*
+import com.ripple.sdk.demo.databinding.ItemMainTitleLayoutBinding
+import com.ripple.sdk.demo.main.*
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntAnnotation
 
 

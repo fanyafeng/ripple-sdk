@@ -1,8 +1,8 @@
-package com.ripple.sdk.main.viewholder
+package com.ripple.sdk.demo.main.viewholder
 
 import android.content.Intent
-import com.ripple.sdk.databinding.ItemMainButtonLayoutBinding
-import com.ripple.sdk.main.*
+import com.ripple.sdk.demo.databinding.ItemMainButtonLayoutBinding
+import com.ripple.sdk.demo.main.*
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntAnnotation
 
 

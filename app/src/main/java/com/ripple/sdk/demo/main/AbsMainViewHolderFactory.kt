@@ -1,7 +1,7 @@
-package com.ripple.sdk.main
+package com.ripple.sdk.demo.main
 
 import androidx.viewbinding.ViewBinding
-import com.ripple.sdk.MainActivity
+import com.ripple.sdk.demo.MainActivity
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.AbsStrategyBaseIntAutoFactory
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.AbsStrategyBaseIntFactory
 

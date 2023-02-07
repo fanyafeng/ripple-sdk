@@ -1,4 +1,4 @@
-package com.ripple.sdk.application
+package com.ripple.sdk.demo.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

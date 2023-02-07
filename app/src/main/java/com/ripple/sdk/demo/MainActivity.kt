@@ -1,13 +1,13 @@
-package com.ripple.sdk
+package com.ripple.sdk.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.ripple.sdk.binding.inflate
-import com.ripple.sdk.databinding.ActivityMainBinding
-import com.ripple.sdk.main.*
-import com.ripple.sdk.main.viewholder.MainButtonViewHolder
-import com.ripple.sdk.main.viewholder.MainTitleViewHolder
+import com.ripple.sdk.demo.databinding.ActivityMainBinding
+import com.ripple.sdk.demo.main.*
+import com.ripple.sdk.demo.main.viewholder.MainButtonViewHolder
+import com.ripple.sdk.demo.main.viewholder.MainTitleViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseIntFactory
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyWithPriorityIntLinkedMap
 import dagger.hilt.android.AndroidEntryPoint

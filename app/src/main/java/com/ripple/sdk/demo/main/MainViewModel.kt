@@ -1,4 +1,4 @@
-package com.ripple.sdk.main
+package com.ripple.sdk.demo.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

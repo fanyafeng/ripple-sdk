@@ -1,4 +1,4 @@
-package com.ripple.sdk.main
+package com.ripple.sdk.demo.main
 
 import android.view.View
 import androidx.viewbinding.ViewBinding
