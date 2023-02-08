@@ -41,28 +41,28 @@ android {
     }
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.fanyafeng'
-//                artifactId = 'ripple-sdk'
-//                version = '0.0.5'
-//            }
-//        }
-//        repositories {
-//            mavenLocal()
-//        }
-//    }
-//}
-
-configurations.all {
-    resolutionStrategy {
-        force 'androidx.core:core-ktx:1.6.0'
-        force 'androidx.core:core:1.6.0'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.fanyafeng'
+                artifactId = 'ripple-sdk'
+                version = '0.0.6'
+            }
+        }
+        repositories {
+            mavenLocal()
+        }
     }
 }
+
+//configurations.all {
+//    resolutionStrategy {
+//        force 'androidx.core:core-ktx:1.6.0'
+//        force 'androidx.core:core:1.6.0'
+//    }
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
