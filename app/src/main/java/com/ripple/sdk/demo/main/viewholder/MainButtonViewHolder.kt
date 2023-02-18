@@ -1,8 +1,11 @@
 package com.ripple.sdk.demo.main.viewholder
 
 import android.content.Intent
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ripple.sdk.demo.databinding.ItemMainButtonLayoutBinding
 import com.ripple.sdk.demo.main.*
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntAnnotation
 
 
@@ -29,6 +32,16 @@ class MainButtonViewHolder(private val binding: ItemMainButtonLayoutBinding) :
                 getGeneralActionClazz()?.let {
                     context.startActivity(Intent(context, it))
                 }
+            }
+        }
+    }
+
+    override fun onViewAttachedToWindow(holder: StrategyBaseViewHolder<MainViewModel, IMainModel>) {
+        super.onViewAttachedToWindow(holder)
+        if (itemViewType == 666) {
+            val params = holder.itemView.layoutParams
+            if (params is StaggeredGridLayoutManager.LayoutParams) {
+                params.isFullSpan = true
             }
         }
     }

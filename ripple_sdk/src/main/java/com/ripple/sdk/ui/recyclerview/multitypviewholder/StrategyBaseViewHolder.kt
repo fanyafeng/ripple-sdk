@@ -21,4 +21,8 @@ abstract class StrategyBaseViewHolder<V : ViewModel, D>(view: View) :
     open fun bindData(viewModel: V?, dataSource: D?, position: Int) {
         floorPosition = position
     }
+
+    open fun onViewAttachedToWindow(holder: StrategyBaseViewHolder<V, D>) {
+
+    }
 }

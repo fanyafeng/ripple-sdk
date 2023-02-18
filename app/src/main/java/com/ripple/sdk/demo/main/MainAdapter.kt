@@ -49,6 +49,11 @@ class MainAdapter @Inject constructor(
         holder.bindData(null, model, position)
     }
 
+    override fun onViewAttachedToWindow(holder: StrategyBaseViewHolder<MainViewModel, IMainModel>) {
+        super.onViewAttachedToWindow(holder)
+        holder.onViewAttachedToWindow(holder)
+    }
+
     override fun getItemViewType(position: Int): Int {
         return mainModelList[position].getGeneralViewType()
     }
