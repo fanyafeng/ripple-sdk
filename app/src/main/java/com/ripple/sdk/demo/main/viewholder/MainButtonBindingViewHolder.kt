@@ -52,18 +52,6 @@ class MainButtonBindingViewHolder(private val binding: ItemMainButtonLayoutBindi
     @ViewHolderIntAnnotation(AbsMainViewHolderFactory.MAIN_BUTTON)
     class Factory :
         AbsMainBindingViewHolderAutoFactory<MainButtonBindingViewHolder, ItemMainButtonLayoutBinding>() {
-        override fun onCreateViewHolder(
-            parent: ViewGroup,
-            viewType: Int
-        ): StrategyBaseBindingViewHolder<MainViewModel, IMainModel> {
-            return MainButtonBindingViewHolder(
-                ItemMainButtonLayoutBinding.inflate(
-                    LayoutInflater.from(parent.context),
-                    parent,
-                    false
-                )
-            )
-        }
     }
 }
 

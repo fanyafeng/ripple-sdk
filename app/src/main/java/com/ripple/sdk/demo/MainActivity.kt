@@ -57,10 +57,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        StrategyWithPriorityIntLinkedMap<MainViewModel, IMainModel>().apply {
-            register(MainButtonViewHolder.Factory::class.java)
-            register(MainTitleViewHolder.Factory::class.java)
-        }
+//        StrategyWithPriorityIntLinkedMap<MainViewModel, IMainModel>().apply {
+//            register(MainButtonViewHolder.Factory::class.java)
+//            register(MainTitleViewHolder.Factory::class.java)
+//        }
 
         StrategyWithPriorityIntBindingLinkedMap<MainViewModel, IMainModel>().apply {
             register(MainButtonBindingViewHolder.Factory::class.java)
