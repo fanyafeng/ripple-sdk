@@ -1,8 +1,9 @@
-package com.ripple.sdk.ui.recyclerview.multitypviewholder
+package com.ripple.sdk.ui.recyclerview.multitypviewholder.linkmap
 
 import androidx.lifecycle.ViewModel
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntAnnotation
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation.ViewHolderIntGetTypeAnnotation
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.factory.AbsStrategyBaseIntFactory
 
 
 /**

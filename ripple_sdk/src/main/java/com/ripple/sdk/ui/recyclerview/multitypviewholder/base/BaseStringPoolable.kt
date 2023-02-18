@@ -1,4 +1,4 @@
-package com.ripple.sdk.ui.recyclerview.multitypviewholder
+package com.ripple.sdk.ui.recyclerview.multitypviewholder.base
 
 import java.util.concurrent.ConcurrentHashMap
 

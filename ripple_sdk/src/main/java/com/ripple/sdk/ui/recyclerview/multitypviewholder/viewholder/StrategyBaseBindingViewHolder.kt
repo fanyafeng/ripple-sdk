@@ -1,9 +1,8 @@
-package com.ripple.sdk.ui.recyclerview.multitypviewholder
+package com.ripple.sdk.ui.recyclerview.multitypviewholder.viewholder
 
-import android.view.View
 import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
 
 
 /**

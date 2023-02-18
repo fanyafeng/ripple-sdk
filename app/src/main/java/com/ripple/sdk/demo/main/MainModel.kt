@@ -1,6 +1,6 @@
 package com.ripple.sdk.demo.main
 
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyWithPriorityIntLinkedMap
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.linkmap.StrategyWithPriorityIntLinkedMap
 import javax.inject.Inject
 
 

@@ -2,7 +2,7 @@ package com.ripple.sdk.demo.main
 
 import android.view.View
 import androidx.viewbinding.ViewBinding
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseBindingViewHolder
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.viewholder.StrategyBaseBindingViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
 
 

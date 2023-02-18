@@ -1,5 +1,6 @@
-package com.ripple.sdk.ui.recyclerview.multitypviewholder
+package com.ripple.sdk.ui.recyclerview.multitypviewholder.linkmap
 
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.base.Poolable
 import java.util.concurrent.ConcurrentHashMap
 
 

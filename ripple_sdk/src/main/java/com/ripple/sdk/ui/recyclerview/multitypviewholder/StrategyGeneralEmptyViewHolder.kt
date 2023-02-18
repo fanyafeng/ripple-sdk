@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 import com.ripple.sdk.databinding.ItemGeneralEmptyViewLayoutBinding
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.viewholder.StrategyBaseBindingViewHolder
 
 
 /**

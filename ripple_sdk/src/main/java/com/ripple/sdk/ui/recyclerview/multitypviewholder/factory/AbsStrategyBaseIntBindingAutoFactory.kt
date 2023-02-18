@@ -1,9 +1,11 @@
-package com.ripple.sdk.ui.recyclerview.multitypviewholder
+package com.ripple.sdk.ui.recyclerview.multitypviewholder.factory
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.viewholder.StrategyBaseBindingViewHolder
 import java.lang.reflect.ParameterizedType
 import java.util.concurrent.ConcurrentHashMap
 
@@ -16,16 +18,17 @@ import java.util.concurrent.ConcurrentHashMap
  *///Github See: https://github.com/fanyafeng
 
 
-abstract class AbsStrategyBaseIntAutoFactory<VH : StrategyBaseBindingViewHolder<V, D>, VB : ViewBinding, V : ViewModel, D>(
-    private val pool: ConcurrentHashMap<Int, StrategyBaseIntFactory<V, D>>
+abstract class AbsStrategyBaseIntBindingAutoFactory<VH : StrategyBaseBindingViewHolder<V, D>, VB : ViewBinding, V : ViewModel, D>(
+    private val pool: ConcurrentHashMap<Int, StrategyBaseIntBindingFactory<V, D>>
 ) :
-    AbsStrategyBaseIntFactory<V, D>(pool) {
+    AbsStrategyBaseIntBindingFactory<V, D>(pool) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): StrategyBaseViewHolder<V, D> {
-        val genericSuperclass = this@AbsStrategyBaseIntAutoFactory.javaClass.genericSuperclass
+    ): StrategyBaseBindingViewHolder<V, D> {
+        val genericSuperclass =
+            this@AbsStrategyBaseIntBindingAutoFactory.javaClass.genericSuperclass
         if (genericSuperclass is ParameterizedType) {
             if (genericSuperclass.actualTypeArguments.isNotEmpty()) {
                 val viewHolderSonClazz = genericSuperclass.actualTypeArguments[0]
@@ -49,7 +52,7 @@ abstract class AbsStrategyBaseIntAutoFactory<VH : StrategyBaseBindingViewHolder<
                             parent,
                             false
                         ) as VB
-                    return constructorMethod.newInstance(resultBinding) as StrategyBaseViewHolder<V, D>
+                    return constructorMethod.newInstance(resultBinding) as StrategyBaseBindingViewHolder<V, D>
                 }
             }
         }

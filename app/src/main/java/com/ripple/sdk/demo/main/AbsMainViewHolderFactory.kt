@@ -2,8 +2,9 @@ package com.ripple.sdk.demo.main
 
 import androidx.viewbinding.ViewBinding
 import com.ripple.sdk.demo.MainActivity
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.AbsStrategyBaseIntAutoFactory
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.AbsStrategyBaseIntFactory
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.factory.AbsStrategyBaseIntAutoFactory
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.factory.AbsStrategyBaseIntBindingAutoFactory
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.factory.AbsStrategyBaseIntFactory
 
 
 /**
@@ -25,3 +26,6 @@ abstract class AbsMainViewHolderFactory :
 
 abstract class AbsMainViewHolderAutoFactory<VH : AbsMainBaseBindingViewHolder, VB : ViewBinding> :
     AbsStrategyBaseIntAutoFactory<VH, VB, MainViewModel, IMainModel>(MainActivity.factoryMapPool)
+
+abstract class AbsMainBindingViewHolderAutoFactory<VH : AbsMainBaseBindingViewHolder, VB : ViewBinding> :
+    AbsStrategyBaseIntBindingAutoFactory<VH, VB, MainViewModel, IMainModel>(MainActivity.factoryBindingMapPool)

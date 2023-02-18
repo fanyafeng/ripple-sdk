@@ -1,6 +1,6 @@
 package com.ripple.sdk.ui.recyclerview.multitypviewholder.annotation
 
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyWithPriorityIntLinkedMap.Companion.DEFAULT_VALUE
+import com.ripple.sdk.ui.recyclerview.multitypviewholder.linkmap.StrategyWithPriorityIntLinkedMap.Companion.DEFAULT_VALUE
 
 /**
  * Author: fanyafeng
