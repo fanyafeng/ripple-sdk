@@ -29,7 +29,7 @@ abstract class AbsStrategyBaseIntAutoFactory<VH : StrategyBaseBindingViewHolder<
     ): StrategyBaseViewHolder<V, D> {
         val genericSuperclass = this@AbsStrategyBaseIntAutoFactory.javaClass.genericSuperclass
         if (genericSuperclass is ParameterizedType) {
-            if (genericSuperclass.actualTypeArguments.isNotEmpty()) {
+            if (genericSuperclass.actualTypeArguments.size >= 2) {
                 val viewHolderSonClazz = genericSuperclass.actualTypeArguments[0]
                 val viewBindSonClazz = genericSuperclass.actualTypeArguments[1]
 
