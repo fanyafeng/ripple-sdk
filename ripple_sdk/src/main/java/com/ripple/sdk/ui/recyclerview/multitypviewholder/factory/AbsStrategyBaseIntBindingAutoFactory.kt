@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
-import com.ripple.sdk.ui.recyclerview.multitypviewholder.StrategyBaseViewHolder
 import com.ripple.sdk.ui.recyclerview.multitypviewholder.viewholder.StrategyBaseBindingViewHolder
 import java.lang.reflect.ParameterizedType
 import java.util.concurrent.ConcurrentHashMap
@@ -19,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap
 
 
 abstract class AbsStrategyBaseIntBindingAutoFactory<VH : StrategyBaseBindingViewHolder<V, D>, VB : ViewBinding, V : ViewModel, D>(
-    private val pool: ConcurrentHashMap<Int, StrategyBaseIntBindingFactory<V, D>>
+    val pool: ConcurrentHashMap<Int, StrategyBaseIntBindingFactory<V, D>>
 ) :
     AbsStrategyBaseIntBindingFactory<V, D>(pool) {
 
